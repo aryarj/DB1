@@ -1,0 +1,88 @@
+Ary de Araújo Rodrigues Júnior
+Outubro de 2019
+
+Os programas foram escritos em Python
+
+'''
+# Desafio 1: classificando um uúmero inteiro e positivo e obtendo o dobro do seu valor
+n=int(input('Digite um número inteiro e positivo \n'))
+# Verificando se o numero é par
+if(n%2==0):
+  print('é par')
+else:
+  print('não é par')
+# Verificando se o número é maior do que 10
+if(n>10):
+  print('é maior do que 10')
+else:
+  print('não é maior do que 10')
+# Obtendo o dobro do número
+print('o dobro de ', n)
+print('é: ',n*2)
+# Verificando se o número é primo
+  #zerando os contadores
+div=0
+count=0
+  # dentro de um loop verificando quantos divisores esse número possui
+for div in range(1, n+1):
+  if(n%div==0):
+    count=count+1
+  # verificando se número tem somente dois divisores e, consequentemente, se é primo
+if(count==2):
+      print('é primo')
+elif(count!=2):
+      print('não é primo')
+'''
+
+'''
+# Desafio 2: Português
+# Entrando com a sentença
+f=(input('Digite uma sentença, sem caracteres especiais ou acentos: \n'))
+print ('\n Essa sentença tem:')
+# Imprimindo o número total de caracteres
+print(len(f),' caracteres, \n')
+# Verificando a quantidade de espaços em branco
+b = 0
+for i in f: 
+    if i == ' ': 
+      b = b + 1
+print(b, 'espaços em branco\n')
+# Verificando a quantidade de vogais
+count = 0
+for i in f: 
+    if i == 'a': 
+        count = count + 1
+    if i == 'e': 
+        count = count + 1
+    if i == 'i': 
+        count = count + 1
+    if i == 'o': 
+        count = count + 1
+    if i == 'u': 
+        count = count + 1
+print(count, 'vogais:\n')
+'''
+
+#Desafio 3: Geografia
+print('Digite uma das seguintes cidades, para saber a que estado ela pertence e se é ou não capital: Curitiba, Maringa, Londrina, Pinhais, Chapeco, Joinvile, Blumenau, Florianopolis, Porto Alegre ou Gramado: \n')
+print ('ATENÇÃO: Ao Digitar a cidade não utilizar acentos \n')
+cid=(input ('Digite a cidade: '))
+# para deixar o nome digitado em minusculas
+c=cid.lower()
+# Realizando os condicionais para classificar a cidade
+if(c=='maringa' or c=='londrina' or c=='pinhais'):
+  print ('Pertence ao Paraná e não é capital')
+elif(c=='curitiba'):
+  print ('Pertence ao Paraná e é a capital')
+elif(c=='chapeco' or c=='joinvile' or c=='blumenau'):
+  print ('Pertence a Santa Catarina e não é capital')
+elif(c=='florianopolis'):
+  print ('Pertence a Santa Catarina e é a capital')
+elif(c=='gramado'):
+  print ('Pertence ao Rio Grande do Sul e não é capital')
+elif(c=='porto alegre'):
+  print ('Pertence ao Rio Grande do Sul e é a capital')
+# Caso a cidade digitada não se encaixe na relação
+else:print('Essa cidade não pertence à relação ou foi digitada com acento ou com a grafia solicitada incorreta , por favor, tente novamente')
+
+
